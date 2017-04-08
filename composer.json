@@ -1,0 +1,22 @@
+{
+    "name": "ssnukala/ufsprinkle-sevak",
+    "type": "sprinkle",
+    "description": "Helper Sprinkle module for UserFrosting.",
+    "keywords": ["php user management", "usercake", "bootstrap"],
+    "homepage": "https://github.com/ssnukala/ufsprinkle-sevak",
+    "license" : "MIT",
+    "authors" : [
+        {
+            "name": "Srinivas Nukala",
+            "homepage": "http://srinivasnukala.com"
+        }
+    ],
+    "version": "4.0.0",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "UserFrosting\\Sprinkle\\Sevak\\": "src/"
+        }
+    }
+}
