@@ -3,7 +3,7 @@
 /**
  * Venue controller 
  *
- * @link      https://github.com/ssnukala/ufsprinkle-chinmaya
+ * @link      https://github.com/ssnukala/ufsprinkle-sevak
  * @copyright Copyright (c) 2013-2016 Srinivas Nukala
  */
 
@@ -19,7 +19,7 @@ use UserFrosting\Sprinkle\Sevak\Controller\DTVenueLongReportController;
 use UserFrosting\Sprinkle\SnUtilities\Controller\SnUtilities as SnUtil;
 
 
-class ChinmayaVenueController extends AdminController {
+class VenueController extends AdminController {
 
     /**
      * Renders the admin panel dashboard
@@ -73,7 +73,7 @@ class ChinmayaVenueController extends AdminController {
         $venuelong = $groupreportcontroller->getDatatableArray();
         
 //        SnUtil::logarr($cmreport,"Line 100");
-        return $this->ci->view->render($response, "components/events/cm-events-dashboard.html.twig", [
+        return $this->ci->view->render($response, "components/events/events-dashboard.html.twig", [
                     'info' => [
                         'version' => [
                             'UF' => $ufVersion,
