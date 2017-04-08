@@ -1,4 +1,11 @@
 <?php
+/**
+ * Venue Datatable Short Report controller 
+ *
+ * @link      https://github.com/ssnukala/ufsprinkle-sevak
+ * @copyright Copyright (c) 2013-2016 Srinivas Nukala
+ */
+
 
 namespace UserFrosting\Sprinkle\Sevak\Controller;
 

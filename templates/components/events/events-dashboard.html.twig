@@ -1,4 +1,4 @@
-{% extends "layouts/cm-dashboard.html.twig" %}
+{% extends "layouts/sevak-dashboard.html.twig" %}
 
 {# Overrides blocks in head of base template #}
 {% block page_title %}{{ translate("DASHBOARD") }}{% endblock %}
@@ -68,7 +68,6 @@
 
     <!-- Include page-specific JS -->
     {{ assets.js('js/pages/dashboard') | raw }}
-    {{ assets.js('js/chinmaya') | raw }}
     {{ venueshort.js | raw }}
     {{ venuelong.js | raw }}
 
