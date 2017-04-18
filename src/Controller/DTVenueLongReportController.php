@@ -26,7 +26,7 @@ class DTVenueLongReportController extends SnDatatablesFFController {
         $properties['dbtable'] = "crsvk_event_venues";
         $this->_data_route = 'venues';
         $this->_process_route = 'venues';
-SnUtil::logarr($properties,"Line 27 venue Long Report");
+//SnUtil::logarr($properties,"Line 27 venue Long Report");
         parent::setupDatatable($properties);
         $this->_datatable['options']["ajax_url"] = "/venues/venuelong";
         $this->_datatable['options']["process_url"] = "/venues";
