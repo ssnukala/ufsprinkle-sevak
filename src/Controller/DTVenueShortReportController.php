@@ -30,7 +30,7 @@ class DTVenueShortReportController extends SnDatatablesFFController {
         $properties['sortable'] = true;
         $properties['show_detail'] = 'Y';
         $properties['ajax_detail'] = 'N';
-        $properties['dbtable'] = "event_venues";
+        $properties['dbtable'] = "event_venue";
         $this->_data_route = 'venues';
         $this->_process_route = 'venues';
 //SnUtil::logarr($properties,"Line 27 venue Short Report");
