@@ -90,4 +90,11 @@ class FormfieldsTableData extends Migration {
         }
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function down() {
+        $this->schema->drop('sevak_formfields');
+}
+
 }
