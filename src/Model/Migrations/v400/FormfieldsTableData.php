@@ -13,7 +13,7 @@ namespace UserFrosting\Sprinkle\Sevak\Model\Migrations\v400;
 use UserFrosting\System\Bakery\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Schema\Builder;
-use UserFrosting\Sprinkle\Sndbforms\Model\Formfields;
+use UserFrosting\Sprinkle\SnDbForms\Model\Formfields;
 
 /**
  * Formfields table migration
