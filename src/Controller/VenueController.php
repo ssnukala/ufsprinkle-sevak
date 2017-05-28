@@ -40,7 +40,7 @@ class VenueController extends SimpleController {
         $groupreportcontroller->setupDatatable($gproperties);
         $groupreportcontroller->createDatatableHTMLJS();
         $venuelong = $groupreportcontroller->getDatatableArray();
-Debug::debug("Line 43 ", $gproperties);
+//Debug::debug("Line 43 ", $gproperties);
         
 //        SnUtil::logarr($cmreport,"Line 100");
         return $this->ci->view->render($response, "components/events/events-dashboard.html.twig", [
@@ -59,7 +59,7 @@ Debug::debug("Line 43 ", $gproperties);
         $reportcontroller = new DTVenueShortReportController($this->ci);
         $reportcontroller->setProtected(false);
         $var_dtoptions = $reportcontroller->getDatatablePost($request);
-SnUtil::logarr($var_dtoptions, "Line 144 sending the following to populate datatable");
+//SnUtil::logarr($var_dtoptions, "Line 144 sending the following to populate datatable");
 //error_log("Line 144 sending the following to populate datatable");
         $var_dtoptions['htmlid'] = $var_dtoptions['id'];
         $reportcontroller->setupDatatable($var_dtoptions);
@@ -79,7 +79,7 @@ SnUtil::logarr($var_dtoptions, "Line 144 sending the following to populate datat
         $var_dtoptions['htmlid'] = $var_dtoptions['id'];
         $reportcontroller->setupDatatable($var_dtoptions);
 
-SnUtil::logarr($var_dtoptions, "Line 133 sending the following to populate datatable");
+//SnUtil::logarr($var_dtoptions, "Line 133 sending the following to populate datatable");
 //        $thisdtController->setWhereCriteria($var_where);
 //                    $thisdtController->setDatatableOption('ajax_url', '/listdata/new');
 //                    error_log("Line 402 sending the following to populate datatable ({$var_nondbcols}, {$var_where}, {$var_filter})");
