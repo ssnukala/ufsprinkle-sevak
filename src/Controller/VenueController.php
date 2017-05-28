@@ -10,16 +10,15 @@
 namespace UserFrosting\Sprinkle\Sevak\Controller;
 
 use Carbon\Carbon;
-use UserFrosting\Sprinkle\Admin\Controller\AdminController;
+use UserFrosting\Sprinkle\Core\Controller\SimpleController;
 use UserFrosting\Support\Exception\ForbiddenException;
-use UserFrosting\Sprinkle\Core\Model\Version;
 use UserFrosting\Sprinkle\Core\Util\EnvironmentInfo;
 use UserFrosting\Sprinkle\Sevak\Controller\DTVenueShortReportController;
 use UserFrosting\Sprinkle\Sevak\Controller\DTVenueLongReportController;
 use UserFrosting\Sprinkle\SnUtilities\Controller\SnUtilities as SnUtil;
 
 
-class VenueController extends AdminController {
+class VenueController extends SimpleController {
 
     /**
      * Renders the admin panel dashboard
