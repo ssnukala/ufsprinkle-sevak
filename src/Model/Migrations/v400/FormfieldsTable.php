@@ -8,7 +8,7 @@
  * @license   https://github.com/userfrosting/UserFrosting/blob/master/licenses/UserFrosting.md (MIT License)
  */
 
-namespace UserFrosting\Sprinkle\Account\Model\Migrations\v400;
+namespace UserFrosting\Sprinkle\Sevak\Model\Migrations\v400;
 
 use UserFrosting\System\Bakery\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
