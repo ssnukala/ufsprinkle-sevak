@@ -15,6 +15,7 @@ use UserFrosting\Support\Exception\ForbiddenException;
 use UserFrosting\Sprinkle\Sevak\Controller\DTVenueShortReportController;
 use UserFrosting\Sprinkle\Sevak\Controller\DTVenueLongReportController;
 use UserFrosting\Sprinkle\SnUtilities\Controller\SnUtilities as SnUtil;
+use UserFrosting\Sprinkle\Core\Facades\Debug;
 
 
 class VenueController extends SimpleController {
@@ -39,6 +40,7 @@ class VenueController extends SimpleController {
         $groupreportcontroller->setupDatatable($gproperties);
         $groupreportcontroller->createDatatableHTMLJS();
         $venuelong = $groupreportcontroller->getDatatableArray();
+Debug::debug("Line 43 ", $gproperties);
         
 //        SnUtil::logarr($cmreport,"Line 100");
         return $this->ci->view->render($response, "components/events/events-dashboard.html.twig", [
