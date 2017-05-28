@@ -23,7 +23,7 @@ use UserFrosting\Sprinkle\Sndbforms\Model\Formfields;
  * @extends Migration
  * @author Alex Weissman (https://alexanderweissman.com)
  */
-class FormfieldsTable extends Migration {
+class FormfieldsTableData extends Migration {
 
     /**
      * {@inheritDoc}
