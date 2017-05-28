@@ -12,7 +12,7 @@ namespace UserFrosting\Sprinkle\Sevak\Controller;
 use Carbon\Carbon;
 use UserFrosting\Support\Exception\ForbiddenException;
 use UserFrosting\Sprinkle\Core\Util\EnvironmentInfo;
-use UserFrosting\Sprinkle\SnDatatables\Controller\SnDatatablesFFController;
+use UserFrosting\Sprinkle\Datatables\Controller\DatatablesFFController;
 use UserFrosting\Sprinkle\SnUtilities\Controller\SnUtilities as SnUtil;
 
 /**
@@ -22,7 +22,7 @@ use UserFrosting\Sprinkle\SnUtilities\Controller\SnUtilities as SnUtil;
  * @author Srinivas Nukala
  * @link http://srinivasnukala.com
  */
-class DTVenueShortReportController extends SnDatatablesFFController {
+class DTVenueShortReportController extends DatatablesFFController {
 
     public function setupDatatable($properties = []) {
         $properties['source'] = 'VenueShort';
