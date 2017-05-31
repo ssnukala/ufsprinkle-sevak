@@ -1,0 +1,61 @@
+{
+    "name" : {
+        "validators" : {
+            "length" : {
+                "min" : 1,
+                "max" : 100
+            },
+            "required" : {
+                "message" : "VALIDATE.REQUIRED"
+            }
+        },
+        "form" : {
+            "type" : "text",
+            "label" : "Project name",
+            "icon" : "fa-flag",
+            "placeholder" : "Project name"
+        },
+        "datatable" : {
+            "searchable" : true,
+            "visible" : true,
+            "orderable" : true
+        }
+    },
+    "description" : {
+        "validators" : {},
+        "form" : {
+            "type" : "textarea",
+            "label" : "Project description",
+            "icon" : "fa-pencil",
+            "placeholder" : "Project description",
+            "rows" : 5
+        },
+        "datatable" : {
+            "searchable" : true,
+            "visible" : true,
+            "orderable" : true
+        }
+    },
+    "status" : {
+        "validators" : {
+            "member_of" : {
+                "values" : [
+                    "0", "1"
+                ]
+            }
+        },
+        "form" : {
+            "type" : "select",
+            "label" : "Status",
+            "options" : {
+                "0" : "Disabled",
+                "1" : "Available"
+            }
+        },
+        "datatable" : {
+            "searchable" : true,
+            "visible" : true,
+            "orderable" : true
+        }
+    }
+}
