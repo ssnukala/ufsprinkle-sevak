@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Schema\Blueprint;
-use UserFrosting\Sprinkle\SnDbForms\Model\Formfields;
+use UserFrosting\Sprinkle\AutoForms\Model\Formfields;
 use UserFrosting\Sprinkle\Sevak\Model\Venue;
 
 echo "Creating 'Venue FormFields Entries'..." . PHP_EOL;
