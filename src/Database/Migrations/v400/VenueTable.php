@@ -13,7 +13,7 @@ namespace UserFrosting\Sprinkle\Sevak\Database\Migrations\v400;
 use UserFrosting\System\Bakery\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Schema\Builder;
-use UserFrosting\Sprinkle\Sevak\Model\Venue;
+use UserFrosting\Sprinkle\Sevak\Database\Models\Venue;
 
 /**
  * Groups table migration
