@@ -6,10 +6,10 @@
  * @copyright Copyright (c) 2013-2016 Alexander Weissman
  * @license   https://github.com/userfrosting/UserFrosting/blob/master/licenses/UserFrosting.md (MIT License)
  */
-namespace UserFrosting\Sprinkle\Sevak\Model;
+namespace UserFrosting\Sprinkle\Sevak\Database\Models;
 
 use Illuminate\Database\Capsule\Manager as Capsule;
-use UserFrosting\Sprinkle\Core\Model\UFModel;
+use UserFrosting\Sprinkle\Core\Database\Models\Model;
 
 /**
  * Venues Class
@@ -20,7 +20,7 @@ use UserFrosting\Sprinkle\Core\Model\UFModel;
  * @author Srinivas Nukala
  *
  */
-class Venue extends UFModel
+class Venue extends Model
 {
     /**
      * @var string The name of the table for the current model.

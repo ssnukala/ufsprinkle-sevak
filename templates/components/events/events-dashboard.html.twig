@@ -1,4 +1,9 @@
-{% extends "layouts/sevak-dashboard.html.twig" %}
+{% extends "layouts/default.html.twig" %}
+{% block stylesheets_page_group %}
+    <!-- Page-group-specific CSS asset bundle -->
+    {{ assets.css('css/datatables') | raw }}
+    
+{% endblock %}
 
 {# Overrides blocks in head of base template #}
 {% block page_title %}{{ translate("DASHBOARD") }}{% endblock %}
@@ -65,9 +70,11 @@
                     page
                     );
     </script>
+    <!-- CM Template Include dtutilities JS -->
+    {{ assets.js('js/dtutilities') | raw }}
+    <!-- CM Template Include datatables JS -->
+    {{ assets.js('js/datatables') | raw }}
 
-    <!-- Include page-specific JS -->
-    {{ assets.js('js/pages/dashboard') | raw }}
     {{ venueshort.js | raw }}
     {{ venuelong.js | raw }}
 
