@@ -39,6 +39,8 @@ class FormfieldsTableData extends Migration {
                 $table->char('visible', 1)->default('Y');
                 $table->char('orderable', 1)->default('N');
                 $table->char('searchable', 1)->default('N');
+                $table->decimal('column_group', 5, 2)->default('0.00');
+                $table->char('showin_table', 1)->default('N');
                 $table->decimal('edit_group', 5, 2)->default('0.00');
                 $table->char('showin_editform', 1)->default('Y');
                 $table->string('label', 200)->nullable();
