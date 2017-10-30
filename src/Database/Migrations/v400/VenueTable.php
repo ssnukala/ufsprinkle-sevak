@@ -41,9 +41,8 @@ class VenueTable extends Migration {
                 $table->string('Zip', 255)->nullable();
                 $table->string('Country', 255)->nullable();
                 $table->string('updated_by', 20)->nullable();
-                $table->timestamp('updated_at');
                 $table->string('created_by', 20)->nullable();
-                $table->timestamp('created_at');
+                $table->timestamps();
                 $table->engine = 'InnoDB';
                 $table->collation = 'utf8_unicode_ci';
                 $table->charset = 'utf8';
