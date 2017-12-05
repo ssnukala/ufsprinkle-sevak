@@ -1,6 +1,6 @@
 {
     "name": "ssnukala/ufsprinkle-sevak",
-    "type": "sprinkle",
+    "type": "userfrosting-sprinkle",
     "description": "Helper Sprinkle module for UserFrosting.",
     "keywords": ["php user management", "usercake", "bootstrap"],
     "homepage": "https://github.com/ssnukala/ufsprinkle-sevak",
@@ -13,10 +13,16 @@
     ],
     "version": "4.0.0",
     "require": {
+        "php": ">=5.6",
+        "userfrosting/sprinkle-autoforms":"*",
+        "ssnukala/ufsprinkle-datatables":"*"     
     },
     "autoload": {
         "psr-4": {
             "UserFrosting\\Sprinkle\\Sevak\\": "src/"
         }
+    },
+    "extra": {
+        "installer-name": "DSD"
     }
 }
