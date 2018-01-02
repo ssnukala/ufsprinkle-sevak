@@ -7,8 +7,8 @@
 Install the following UserFrosting Sprinkles as submodules in you
 app/sprinkles directory
 
-* git submodule add git@github.com:ssnukala/ufsprinkle-datatables.git Datatables
-* git submodule add git@github.com:ssnukala/ufsprinkle-sevak Sevak
+* git submodule add -b master  git@github.com:ssnukala/ufsprinkle-datatables Datatables
+* git submodule add -b master git@github.com:ssnukala/ufsprinkle-sevak Sevak
 
 Add     
 ```        
