@@ -8,6 +8,8 @@ app/sprinkles directory
 * git submodule add git@github.com:ssnukala/ufsprinkle-datatables.git Datatables
 * git submodule add git@github.com:ssnukala/ufsprinkle-sevak Sevak
 
+Run `composer update` then `php bakery bake` to install the sprinkle assets
+
 
 ### Go to 
 
