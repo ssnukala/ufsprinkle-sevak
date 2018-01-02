@@ -3,8 +3,8 @@
 /**
  * UserFrosting (http://www.userfrosting.com)
  *
- * @link      https://github.com/userfrosting/UserFrosting
- * @copyright Copyright (c) 2013-2016 Alexander Weissman
+ * @link      https://github.com/ssnukala/ufsprinkle-sevak
+ * @copyright Copyright (c) 2013-2018 Sriniva Nukala
  * @license   https://github.com/userfrosting/UserFrosting/blob/master/licenses/UserFrosting.md (MIT License)
  */
 
@@ -16,13 +16,12 @@ use Illuminate\Database\Schema\Builder;
 use UserFrosting\Sprinkle\Sevak\Database\Models\Venues;
 
 /**
- * Groups table migration
- * "Group" now replaces the notion of "primary group" in earlier versions of UF.  A user can belong to exactly one group.
- * Version 4.0.0
+ * Venues table migration
+ * For Userfrosting Version 4.0.x
  *
  * See https://laravel.com/docs/5.4/migrations#tables
  * @extends Migration
- * @author Alex Weissman (https://alexanderweissman.com)
+ * @author Srinivas Nukala (http://srinivasnukala.com)
  */
 class VenueTable extends Migration {
 
