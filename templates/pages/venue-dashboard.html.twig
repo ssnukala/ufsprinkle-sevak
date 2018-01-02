@@ -1,0 +1,116 @@
+{% extends "pages/abstract/dashboard.html.twig" %}
+{% block stylesheets_page_group %}
+    <!-- Page-group-specific CSS asset bundle -->
+    {{ assets.css('css/datatables') | raw }}
+
+{% endblock %}
+
+{# Overrides blocks in head of base template #}
+{% block page_title %}{{ translate("DASHBOARD") }}{% endblock %}
+{% block page_description %}{% endblock %}
+
+{% block body_matter %}
+    <!-- Info boxes -->
+
+    <div class="container">
+        <div class="ilba_tabs" style='border:1px solid lightgray;border-radius:5px;padding:2px;'>
+            {% set tabactive =' active ' %}
+            <ul class="nav nav nav-pills ilba-pills" style="border-bottom: none;">
+                <li style="border-bottom: 1px dotted lightgray;" class=' {{tabactive}} '>
+                    <a data-toggle="tab" href="#venuetab-0">Venues Short Report</a>
+                </li>
+                {% set tabactive ='  ' %}
+                <li style="border-bottom: 1px dotted lightgray;" class=' {{tabactive}} '>
+                    <a data-toggle="tab" href="#venuetab-1">Venues Long Report</a>
+                </li>
+            </ul>
+            {% set tabactive =' active ' %}
+            <div class="tab-content ">
+                <div id="venuetab-0" class="venuereport tab-pane {{tabactive}} ">
+                    <div class='row'>
+                        <div class='col-md-12 venuereport_datatable' >
+                            <div id="widget-activities" class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title"><i class="fa fa-tasks fa-fw"></i>Event Venues Report</h3>
+                                </div>
+                                <div class="box-body">
+                                    {% set filter_sep = '' %}
+                                    {% for filter_url,filter_name in venueshort.options.filters %}
+                                        {{filter_sep}}<a href="#" onClick="reloadDatatableNewURL('{{ venueshort.options.htmlid }}', '{{filter_url}}');">
+                                            {{filter_name}}
+                                        </a>
+                                        {% set filter_sep = ' | ' %}
+                                    {% endfor %}  
+                                    
+                                    {% include 'components/datatable.html.twig' with {'dtoptions':venueshort.options } %}                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <style>
+                        .client_list_detailed {width:60%;}
+                    </style>
+                </div>
+                {% set tabactive ='  ' %}
+                <div id="venuetab-1" class="dsdnasolns tab-pane {{tabactive}} ">
+                    <div class='row'>
+                        <div class='col-md-12 dsdnasolns_datatable' >
+                            <div id="widget-activities" class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title"><i class="fa fa-tasks fa-fw"></i> {{translate('DSD Solution Tracking Report', 2)}}</h3>
+                                    <div class="pull-right">
+                                        <button class="btn btn-sm btn-default js-download-table">Download CSV</button>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <div class="filter_links">
+                                        {% set filter_sep = '' %}
+                                        {% for filter_url,filter_name in venuelong.options.filters %}
+                                            {{filter_sep}}<a href="#" onClick="reloadDatatableNewURL('{{ venuelong.options.htmlid }}', '{{filter_url}}');">
+                                                {{filter_name}}
+                                            </a>
+                                            {% set filter_sep = ' | ' %}
+                                        {% endfor %}                                        
+                                    </div>
+                                    {% include 'components/datatable.html.twig' with {'dtoptions':venuelong.options } %}                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
+                {% set tabactive ='  ' %}
+            </div>
+        </div>
+    </div>        
+    <div class='column-formatters' style='display:none;'>
+        {% for colformatter in venuelong.options.formatters %}
+            {% include colformatter %}
+        {% endfor%}    
+        {% for colformatter in venueshort.options.formatters %}
+            {% include colformatter %}
+        {% endfor%}    
+    </div>
+    <!-- /.row -->
+{% endblock %}
+
+{% block scripts_page %}
+    <!-- Include page variables -->
+    <script type="text/javascript" id="ffsarep_js">
+        {% include "pages/partials/page.js.twig" %}
+
+            // Add user name
+            page = $.extend(
+                    true, // deep extend
+                    {
+                        "group_slug": "{{current_user.group.slug}}"
+                    },
+                    page
+                    );
+    </script>
+    <!-- CM Template Include datatables JS -->
+    {{ assets.js('js/datatables') | raw }}
+    <!-- CM Template Include dtutilities JS -->
+    {{ assets.js('js/dtutilities') | raw }}
+    {% include 'components/datatable.js.twig' with {'dtoptions':venuelong.options,'fields':venuelong.fields } %}                                    
+    {% include 'components/datatable.js.twig' with {'dtoptions':venueshort.options ,'fields':venueshort.fields } %}                                    
+{% endblock %}

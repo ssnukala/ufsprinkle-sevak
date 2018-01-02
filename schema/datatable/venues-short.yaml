@@ -1,0 +1,51 @@
+{
+"id": {
+"name": "id",
+"visible" : false,
+"orderable" : true,
+"title" : "ID",
+"searchable" : true
+},
+"venue_name": {
+"name": "venue_name",
+"visible" : true,
+"orderable" : true,
+"title" : "Venue Name",
+"searchable" : true
+},
+"venue_id": {
+"name": "venue_id",
+"visible" : false,
+"orderable" : true,
+"title" : "Venueid",
+"searchable" : true
+},
+"street_address": {
+"name": "street_address",
+"visible" : true,
+"orderable" : true,
+"title" : "Street Address",
+"searchable" : true
+},
+"state": {
+"name": "state",
+"visible" : false,
+"orderable" : true,
+ "title" : "State",
+"searchable" : true
+},
+"zip": {
+"name": "zip",
+"visible" : false,
+"orderable" : true,
+"title" : "Zip",
+"searchable" : true
+},
+"country": {
+"name": "country",
+"visible" : false,
+"orderable" : true,
+"title" : "Country",
+"searchable" : true
+}
+}

@@ -20,20 +20,20 @@ use UserFrosting\Sprinkle\Core\Database\Models\Model;
  * @author Srinivas Nukala
  *
  */
-class Venue extends Model
+class Venues extends Model
 {
     /**
      * @var string The name of the table for the current model.
      */
-    protected $table = "event_venue";
+    protected $table = "sevak_venues";
 
     protected $fillable = [
-        "Venue",
-        "VenueID",
-        "StreetAddress",
-        "State",
-        "Zip",
-        "Country"
+        "venue_name",
+        "venue_id",
+        "street_address",
+        "state",
+        "zip",
+        "country"
     ];
 
     /**
@@ -41,17 +41,19 @@ class Venue extends Model
      */
     public $timestamps = true;
 
-    /**
-     * Delete this group from the database, along with any user associations
-     *
-     * @todo What do we do with users when their group is deleted?  Reassign them?  Or, can a user be "groupless"?
-     */
-    public function delete()
-    {
-        // Delete the group
-        $result = parent::delete();
+    public function scopeInTexas($query) {
+//Debug::debug("Line 48 ", $args);
+        return $query->where('state', 'Texas');
+    }
 
-        return $result;
+    public function scopeInCalifornia($query) {
+//Debug::debug("Line 48 ", $args);
+        return $query->where('state', 'California');
+    }
+
+    public function scopeInNewYork($query) {
+//Debug::debug("Line 48 ", $args);
+        return $query->where('state', 'New York');
     }
 
 }

@@ -7,7 +7,9 @@
  */
 
 $app->group('/venues', function () {
-    $this->get('/dashboard','UserFrosting\Sprinkle\Sevak\Controller\VenueController:pageDashboard');
-    $this->post('/venuelong','UserFrosting\Sprinkle\Sevak\Controller\VenueController:venueLongData');
-    $this->post('/venueshort','UserFrosting\Sprinkle\Sevak\Controller\VenueController:venueShortData');
+    $this->get('','UserFrosting\Sprinkle\Sevak\Controller\VenueController:pageDashboard');
+    $this->post('/fulllist','UserFrosting\Sprinkle\Sevak\Controller\Datatables\VenuesShortController:venuesFulllist');
+    $this->post('/texas','UserFrosting\Sprinkle\Sevak\Controller\Datatables\VenuesShortController:venuesTexas');
+    $this->post('/newyork','UserFrosting\Sprinkle\Sevak\Controller\Datatables\VenuesShortController:venuesNewYork');
+    $this->post('/california','UserFrosting\Sprinkle\Sevak\Controller\Datatables\VenuesShortController:venuesCalifornia');
 });
