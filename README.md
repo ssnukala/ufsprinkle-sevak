@@ -11,6 +11,6 @@ app/sprinkles directory
 
 ### Go to 
 
-http://yoursite.vhost/venues/dashboard
+http://<yoursite.com>/venues
 
-You will see the datatables with 
+You will see the datatables in action 
