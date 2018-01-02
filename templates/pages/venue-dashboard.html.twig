@@ -1,4 +1,4 @@
-{% extends "pages/abstract/dashboard.html.twig" %}
+{% extends "pages/abstract/default.html.twig" %}
 {% block stylesheets_page_group %}
     <!-- Page-group-specific CSS asset bundle -->
     {{ assets.css('css/datatables') | raw }}
@@ -6,7 +6,7 @@
 {% endblock %}
 
 {# Overrides blocks in head of base template #}
-{% block page_title %}{{ translate("DASHBOARD") }}{% endblock %}
+{% block page_title %}{{ translate("Venues") }}{% endblock %}
 {% block page_description %}{% endblock %}
 
 {% block body_matter %}
